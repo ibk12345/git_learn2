@@ -44,3 +44,30 @@ SELECT * FROM table_name OFFSET int LIMIT int;
 
 Select * FROM table_name WHERE name_field in 
 ('some1', 'some2');
+
+
+Нужно использовать commit => pull => push
+
+
+aggregate function
+AVG, COUNT, SUM, MAX, MIN
+
+SELECT COUNT(*) FROM table_name;
+SELECT AVG(field) FROM table_name;    (SUM, MAX, MIN, etcet)
+
+SELECT COUNT(*), field_name1 FROM table_name GROUP_name GROUP BY field_name1;
+
+SELECT COUNT(*), field1 FROM table_name GROUP BY field_name1 HAVING COUNT(*) > INT;
+SELECT * FROM table WHERE NOT field ='some';
+SELECT * FROM table WHERE  field != (<>) 'some';
+SELECT * FROM table WHERE  field US NULL;
+
+SELECT field1 AS new_field1 from table ;
+SELECT * FROM table IRDER BY field (default =ASC) DESC;
+
+SELECT * FROM table WHERE field BETWEEN 'some1'  AND 'some2' LIMIT 2;
+
+SELECT * FROM table WHERE field BETWEEN LIKE '%some1'  AND ILIKE '%some2%' LIMIT 2;
+SELECT DISTINCT field FROM table OFFSET 4; -> return unique
+
+UPDATE table SET field ='new_value' where id =1;
